@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Guessing Game</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 id="title">Card Guessing Game</h1>
+    <div id="grid" class="grid">
+      <% cards.forEach((card, index) => { %>
+        <div class="card" data-index="<%= index %>" data-card="<%= card %>">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back"><%= card %></div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <button id="resetBtn">Reset Game</button>
+  </div>
+  <script src="/game.js"></script>
+</body>
+</html>
